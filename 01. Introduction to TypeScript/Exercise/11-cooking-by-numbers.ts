@@ -1,4 +1,4 @@
-function cookingByNumbers(numberAsString: string, ...input: string[]) {
+function cookingByNumbers(numberAsString: string, ...input: string[]): void {
     let result: number = Number(numberAsString);
 
     let chop = (number: number): number => number / 2;
