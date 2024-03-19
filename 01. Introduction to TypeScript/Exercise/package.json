@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./dist/2-string-length.js"
+    "start": "tsc && node ./dist/3-circle-area.js"
   },
   "keywords": [],
   "author": "",
