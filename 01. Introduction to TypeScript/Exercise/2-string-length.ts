@@ -1,4 +1,4 @@
-function solve(textOne: string, textTwo: string, textThree: string) {
+function solve(textOne: string, textTwo: string, textThree: string): void {
     let lengthSum: number = textOne.length + textTwo.length + textThree.length;
     let averageSum: number = Math.floor(lengthSum / 3);
 
