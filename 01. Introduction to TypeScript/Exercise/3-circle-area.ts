@@ -9,5 +9,3 @@ function area(input: string | number): void {
 
     console.log(area.toFixed(2));
 }
-
-area(5)
