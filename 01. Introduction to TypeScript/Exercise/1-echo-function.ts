@@ -3,5 +3,3 @@ function echoFunction(text: string): void {
     console.log(length);
     console.log(text);
 }
-
-echoFunction('Hello, JavaScript!');

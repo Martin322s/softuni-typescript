@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./dist/1-echo-function.js"
+    "start": "tsc && node ./dist/2-string-length.js"
   },
   "keywords": [],
   "author": "",
