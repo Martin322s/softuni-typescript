@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc && node ./dist/1-rectangle-area.js"
+    "compile": "tsc && node ./dist/2-largest-number.js"
   },
   "keywords": [],
   "author": "",
