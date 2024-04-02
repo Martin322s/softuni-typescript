@@ -1,0 +1,12 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc && node ./dist/1-rectangle-area.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
