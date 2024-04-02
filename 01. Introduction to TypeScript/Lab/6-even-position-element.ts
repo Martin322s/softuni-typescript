@@ -1,4 +1,4 @@
-function evenElement(arr: string[]) {
+function evenElement(arr: string[]): void {
     let resultArr: number[] = [];
 
     for (let i: number = 0; i < arr.length; i++) {
@@ -9,5 +9,3 @@ function evenElement(arr: string[]) {
 
     console.log(resultArr.join(' '));
 }
-
-evenElement(['5']);
