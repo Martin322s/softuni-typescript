@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc && node ./dist/9-employees.js"
+    "compile": "tsc && node ./dist/10-aggregate-elements.js"
   },
   "keywords": [],
   "author": "",

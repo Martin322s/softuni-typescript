@@ -10,11 +10,3 @@ function employees(input: string[]): void {
             console.log(`Name: ${person.name} -- Personal Number: ${person.personalNumber}`)
         );
 }
-
-employees([
-    'Samuel Jackson',
-    'Will Smith',
-    'Bruce Willis',
-    'Tom Holland'
-    ]
-    );
