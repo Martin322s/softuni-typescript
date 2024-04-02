@@ -1,4 +1,4 @@
-function biggerHalf(arr: number[]): void {
+function biggerHalf(arr: number[]): number[] {
     let resultArr: number[] = [];
     let sortedArr: number[] = arr.sort((a: number, b: number) => a - b);
     let startNumber = sortedArr.length % 2 === 0 
@@ -9,5 +9,5 @@ function biggerHalf(arr: number[]): void {
         resultArr.push(sortedArr[i]);
     }
 
-    console.log(resultArr);
+    return resultArr;
 }
