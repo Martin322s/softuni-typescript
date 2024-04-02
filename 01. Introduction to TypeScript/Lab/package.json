@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc && node ./dist/2-largest-number.js"
+    "compile": "tsc && node ./dist/3-sum-numbers.js"
   },
   "keywords": [],
   "author": "",

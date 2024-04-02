@@ -14,5 +14,3 @@ function largestNumber(numOne: number, numTwo: number, numThree: number): void {
 
     console.log(`The largest number is ${largestNumber}.`);
 }
-
-largestNumber(-3, -5, -22.5);

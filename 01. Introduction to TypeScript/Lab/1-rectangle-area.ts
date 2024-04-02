@@ -6,5 +6,3 @@ function rectangleArea(numOne: number, numTwo: number): void {
 
     console.log(area);
 }
-
-rectangleArea(5, 7);
