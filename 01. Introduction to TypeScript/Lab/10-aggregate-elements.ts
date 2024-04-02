@@ -1,4 +1,4 @@
-function aggregateElements(input: number[]) {
+function aggregateElements(input: number[]): void {
     let sum: number = input.reduce((acc: number, curr: number): number => {
         return acc + curr;
     }, 0);
