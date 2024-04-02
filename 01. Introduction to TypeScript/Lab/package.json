@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc && node ./dist/5-math-operations.js"
+    "compile": "tsc && node ./dist/6-even-position-element.js"
   },
   "keywords": [],
   "author": "",
