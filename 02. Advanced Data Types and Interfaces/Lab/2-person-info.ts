@@ -4,7 +4,7 @@ type Person = {
     age: number
 };
 
-function personInfo(firstName: string, lastName: string, ageAsText: string) {
+function personInfo(firstName: string, lastName: string, ageAsText: string): Person {
     let age: number = Number(ageAsText);
 
     return {
