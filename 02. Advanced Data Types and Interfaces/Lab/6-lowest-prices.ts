@@ -31,14 +31,3 @@ function lowestPrices(input: string[]) {
 
     lowestPriceProducts.forEach(x => console.log(`${x.name} -> ${x.price} (${x.town})`));
 }
-
-lowestPrices([
-    'Sample Town | Sample Product | 1000',
-    'Sample Town | Orange | 2',
-    'Sample Town | Peach | 1',
-    'Sofia | Orange | 3',
-    'Sofia | Peach | 2',
-    'New York | Sample Product | 1000.1',
-    'New York | Burger | 10',
-    'New York | Sample Product | 999',
-]);
