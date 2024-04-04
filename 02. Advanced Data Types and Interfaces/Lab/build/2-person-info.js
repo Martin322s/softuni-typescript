@@ -7,4 +7,3 @@ function personInfo(firstName, lastName, ageAsText) {
         age
     };
 }
-console.log(personInfo('Peter', 'Pan', '20'));
