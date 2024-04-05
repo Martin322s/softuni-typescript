@@ -9,13 +9,9 @@ function heroInventory(input) {
     }
     let sortedResult = result.sort((a, b) => a.level - b.level);
     sortedResult.forEach(hero => {
-        console.log(`Hero: ${hero.heroName}
+        console.log(`
+            Hero: ${hero.heroName}
             level => ${hero.level}
             Items => ${hero.items.join(', ')}`);
     });
 }
-heroInventory([
-    'Isacc / 25 / Apple, GravityGun',
-    'Derek / 12 / BarrelVest, DestructionSword',
-    'Hes / 1 / Desolator, Sentinel, Antara'
-]);
