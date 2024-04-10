@@ -5,6 +5,12 @@ interface Vehicle {
 }
 
 class Car implements Vehicle {
+    operate() {
+        throw new Error("Method not implemented.");
+    }
+    drive() {
+        throw new Error("Method not implemented.");
+    }
     type = 'Car';
 
     start() {
