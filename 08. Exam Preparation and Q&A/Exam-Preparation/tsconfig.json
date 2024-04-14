@@ -1,0 +1,5 @@
+{
+    "target": "ES2022",
+    "outDir": "./dist",
+    "rootDir": "./"
+}
