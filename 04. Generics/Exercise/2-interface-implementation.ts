@@ -23,6 +23,12 @@ class Car implements Vehicle {
 }
 
 class Bike implements Vehicle {
+    drive(): void {
+        throw new Error("Method not implemented.");
+    }
+    operate(): void {
+        throw new Error("Method not implemented.");
+    }
     type = 'Bike';
 
     start() {
