@@ -22,3 +22,8 @@ let integer: number = 12;
 let floatingPoint: number = 3.14;
 let binary: number = 0x001011001;
 let hex = 0E45;
+
+// Boolean
+let alwaysTrue: boolean = true;
+let alwaysFalse: boolean = false;
+let isGreater: boolean = 5 < 2;
