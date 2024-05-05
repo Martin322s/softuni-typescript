@@ -32,3 +32,8 @@ let isGreater: boolean = 5 < 2;
 let symOne: symbol = Symbol('key1');
 let symTwo: symbol = Symbol('key2');
 let areEqual: boolean = symOne === symTwo;
+
+// Null & Undefined
+let undefinedVariable: undefined;
+let undefinedVariable2: undefined = undefined;
+let obj: null = null;
