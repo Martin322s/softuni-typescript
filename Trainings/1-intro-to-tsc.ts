@@ -37,3 +37,7 @@ let areEqual: boolean = symOne === symTwo;
 let undefinedVariable: undefined;
 let undefinedVariable2: undefined = undefined;
 let obj: null = null;
+
+// Arrays
+let names: string[] = ['Pesho', 'Mitkp', 'Gosho'];
+let grades: Array<number> = [1, 13, 5, 1, 5];
