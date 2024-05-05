@@ -27,3 +27,8 @@ let hex = 0E45;
 let alwaysTrue: boolean = true;
 let alwaysFalse: boolean = false;
 let isGreater: boolean = 5 < 2;
+
+// Symbol
+let symOne: symbol = Symbol('key1');
+let symTwo: symbol = Symbol('key2');
+let areEqual: boolean = symOne === symTwo;
