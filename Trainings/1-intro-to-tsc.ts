@@ -46,3 +46,11 @@ let grades: Array<number> = [1, 13, 5, 1, 5];
 let stringTuple: [string, string] = ['Martin', 'Sofroniev'];
 let numberTuple: [number, string] = [1, 'Ivan'];
 let simpleTuple: [null, object] = [null, {}];
+
+// Enums
+enum Gender {
+   Male = 'm',
+   Female = 'f'
+};
+
+console.log(Gender.Male);
