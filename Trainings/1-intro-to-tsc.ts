@@ -16,3 +16,9 @@ class Person {
 let firstName: string = 'Martin'; // Single quotes
 let secondName: string = "Sofroniev"; // Double quotes
 let fullName: string = `${firstName} ${secondName}`; // Interpolation
+
+// Number
+let integer: number = 12;
+let floatingPoint: number = 3.14;
+let binary: number = 0x001011001;
+let hex = 0E45;
