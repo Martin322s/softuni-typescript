@@ -41,3 +41,8 @@ let obj: null = null;
 // Arrays
 let names: string[] = ['Pesho', 'Mitkp', 'Gosho'];
 let grades: Array<number> = [1, 13, 5, 1, 5];
+
+// Tuples
+let stringTuple: [string, string] = ['Martin', 'Sofroniev'];
+let numberTuple: [number, string] = [1, 'Ivan'];
+let simpleTuple: [null, object] = [null, {}];
