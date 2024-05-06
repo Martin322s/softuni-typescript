@@ -54,3 +54,7 @@ enum Gender {
 };
 
 console.log(Gender.Male);
+
+// Void
+let printSum = (a: number, b: number): void => console.log(a + b);
+let sum = (a: number, b: number): number => a + b;
