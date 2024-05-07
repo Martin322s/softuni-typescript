@@ -26,3 +26,11 @@ let statusCode: StatusCodes = 200;
 // simple type alias
 type StatusCode = number;
 let statCode: StatusCode = 200;
+
+// object type alias
+type User = {
+    name: string,
+    age: number
+};
+
+let user: User = { name: 'Martin', age: 22 };
