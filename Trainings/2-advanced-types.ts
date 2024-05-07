@@ -22,3 +22,7 @@ let garry: Cat & Animal = {
 type StatusCodes = 200 | 301 | 401 | 404;
 let statusResult: "success" | "error" = 'success';
 let statusCode: StatusCodes = 200;
+
+// simple type alias
+type StatusCode = number;
+let statCode: StatusCode = 200;
