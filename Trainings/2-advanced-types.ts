@@ -39,3 +39,13 @@ let user: User = { name: 'Martin', 1: 22 };
 type UserKeys = keyof User;
 
 let userKeys: UserKeys = 22;
+
+// mapped types
+type Optional<T> = { [K in keyof T]?: T[K] }; 
+
+type Point = {
+    x: number,
+    y: number
+};
+
+let point: Optional<Point> = { x: 1, y: 2 };
