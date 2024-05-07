@@ -56,3 +56,29 @@ type TreeNode = {
     right?: TreeNode,
     value: number
 }
+
+// interfaces
+interface Human {
+    name: string;
+    age: number;
+    saysHello(name: string): void;
+    move: () => void
+}
+
+class Person1 implements Human {
+    public name: string;
+    public age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    saysHello(name: string): void {
+        console.log(`${this.name} says Hello!`);
+    }
+
+    move(): void {
+        console.log('Moving...!');
+    }
+}
