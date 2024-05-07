@@ -30,7 +30,12 @@ let statCode: StatusCode = 200;
 // object type alias
 type User = {
     name: string,
-    age: number
+    [age: number]: number
 };
 
-let user: User = { name: 'Martin', age: 22 };
+let user: User = { name: 'Martin', 1: 22 };
+
+// keyof usage
+type UserKeys = keyof User;
+
+let userKeys: UserKeys = 22;
