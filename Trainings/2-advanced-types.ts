@@ -12,10 +12,10 @@ type Animal = {
     walking: () => void
 }
 
-let garry: Cat & Animal = { 
-    furColor: 'Orange', 
-    legsCount: 4, 
-    walking: () => console.log('Move') 
+let garry: Cat & Animal = {
+    furColor: 'Orange',
+    legsCount: 4,
+    walking: () => console.log('Move')
 };
 
 // literal type
@@ -41,7 +41,7 @@ type UserKeys = keyof User;
 let userKeys: UserKeys = 22;
 
 // mapped types
-type Optional<T> = { [K in keyof T]?: T[K] }; 
+type Optional<T> = { [K in keyof T]?: T[K] };
 
 type Point = {
     x: number,
@@ -49,3 +49,10 @@ type Point = {
 };
 
 let point: Optional<Point> = { x: 1, y: 2 };
+
+// recursive types
+type TreeNode = {
+    left?: TreeNode,
+    right?: TreeNode,
+    value: number
+}
