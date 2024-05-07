@@ -17,3 +17,8 @@ let garry: Cat & Animal = {
     legsCount: 4, 
     walking: () => console.log('Move') 
 };
+
+// literal type
+type StatusCodes = 200 | 301 | 401 | 404;
+let statusResult: "success" | "error" = 'success';
+let statusCode: StatusCodes = 200;
