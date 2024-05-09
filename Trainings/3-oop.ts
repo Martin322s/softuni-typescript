@@ -174,6 +174,62 @@ interface UserInterface {
 }
 
 // 5. Dependency Inversion Principle
+class Wallet {
+    balance: number;
+  
+    constructor(balance: number) {
+      this.balance = balance;
+    }
+  }
+  
+  class Course {
+    courses: string[];
+  
+    constructor(courses: string[]) {
+      this.courses = courses;
+    }
+  }
+  
+  //  BAD PRACTICE!
+  class UserCL {
+    wallet: Wallet;
+    username: string;
+    course: Course;
+    //   DON'T DO THAT -> BAD PRACTICE
+    constructor(username: string, balance: number, courses: string[]) {
+      this.username = username;
+      this.wallet = new Wallet(balance);
+      this.course = new Course(courses);
+    }
+  }
+  
+  const userPesho = new UserCL("pesho123", 3000, ["JS", "Python"]);
+  console.log("balance: ", userPesho.username, userPesho.wallet.balance);
+  console.log("courses", userPesho.course.courses);
+  console.log("----------------------");
+  const userMaria = new UserCL("maria123", 4000, ["NodeJS", "SQL", "C++"]);
+  console.log("balance: ", userMaria.username, userMaria.wallet.balance);
+  console.log("courses", userMaria.course.courses);
+  
+  // GOOD PRACTICE
+  class UserC {
+    wallet: Wallet;
+    username: string;
+    course: Course;
+  
+    // INJECTED!
+    constructor(username: string, wallet: Wallet, course: Course) {
+      this.username = username;
+      this.wallet = wallet;
+      this.course = course;
+    }
+  }
+  
+  const walletIvan = new Wallet(4000);
+  const coursesIvan = new Course(["C#", "JS"]);
+  const userIvan = new UserC("ivan123", walletIvan, coursesIvan);
+  console.log("balance: ", userIvan.username, userIvan.wallet.balance);
+  console.log("courses", userIvan.course.courses);
 
 // Classes - Function constructor and Objects
 
