@@ -30,6 +30,36 @@ class Stork extends Bird {
 }
 
 // Inheritance
+class Parent {
+    name?: string;
+    age?: number;
+    eyeColor: string | undefined;
+    hairColor: string | undefined;
+
+    constructor(eyeColor: string, hairColor: string, name?: string, age?: number) {
+        // Parent specific props
+        this.name = name;
+        this.age = age;
+        // Inherit available props
+        this.eyeColor = eyeColor;
+        this.hairColor = hairColor;
+    }
+}
+
+class Child extends Parent {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number, eyeColor: string, hairColor: string) {
+        // Parent inheirted
+        super(eyeColor, hairColor);
+        // Child specific props
+        this.name = name;
+        this.age = age;
+
+    }
+}
+
 // Encapsulation
 // Polymorphism
 
