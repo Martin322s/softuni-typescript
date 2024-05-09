@@ -92,6 +92,23 @@ class Fish {
 
 // SOLID
 // 1. Single Responsibility Principle
+class LoginUserService {
+    loginUser() {
+
+    }
+
+    // import User repository
+    searchUser() {
+
+    }
+}
+
+class UserRepository {
+    searchUser() {
+
+    }
+}
+
 // 2. Open-Closed Principle
 // 3. Liskov Substitution Principle
 // 4. Interface Segregation Principle
