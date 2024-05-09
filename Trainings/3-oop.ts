@@ -143,6 +143,36 @@ class LavazzaCoffeeMachine extends CoffeeMachine {
 }
 
 // 4. Interface Segregation Principle
+interface Company {
+    name: string,
+    catchPhrase: string,
+    bs: string
+}
+
+interface Address {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string
+}
+
+interface Geo {
+    lat: string,
+    lng: string
+}
+
+interface UserInterface {
+    id: number,
+    name: string,
+    username: string,
+    email: string,
+    address: Address,
+    geo: Geo,
+    phone: string,
+    website: string,
+    company: Company
+}
+
 // 5. Dependency Inversion Principle
 
 // Classes - Function constructor and Objects
