@@ -110,6 +110,25 @@ class UserRepository {
 }
 
 // 2. Open-Closed Principle
+class Order {
+    constructor(private items: { price: number }[], protected discount: number = 0) { }
+
+    calculateTotal() {
+        const subtotal = this.items.reduce((total, item) => total + item.price, 0);
+        return subtotal - subtotal * (this.discount / 100);
+    }
+}
+
+class DiscountedOrder extends Order {
+    constructor(items: { price: number }[], protected discount: number) {
+        super(items);
+    }
+
+    applyDiscount() {
+        return this.calculateTotal() * (1 - this.discount / 100);
+    }
+}
+
 // 3. Liskov Substitution Principle
 // 4. Interface Segregation Principle
 // 5. Dependency Inversion Principle
