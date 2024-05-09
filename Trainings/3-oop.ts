@@ -61,6 +61,18 @@ class Child extends Parent {
 }
 
 // Encapsulation
+class Human {
+    name: string;
+    protected egn: string;
+
+    constructor(name: string, egn: string) {
+        this.name = name;
+        this.egn = egn;
+    }
+}
+
+let pesho = new Human('Pesho', '9865741233');
+
 // Polymorphism
 
 // SOLID
