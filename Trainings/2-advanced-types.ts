@@ -8,15 +8,15 @@ type Cat = {
     legsCount: number;
 }
 
-type Animal = {
-    walking: () => void
-}
+// type Animal = {
+//     walking: () => void
+// }
 
-let garry: Cat & Animal = {
-    furColor: 'Orange',
-    legsCount: 4,
-    walking: () => console.log('Move')
-};
+// let garry: Cat & Animal = {
+//     furColor: 'Orange',
+//     legsCount: 4,
+//     walking: () => console.log('Move')
+// };
 
 // literal type
 type StatusCodes = 200 | 301 | 401 | 404;
@@ -65,20 +65,20 @@ interface Human {
     move: () => void
 }
 
-class Person1 implements Human {
-    public name: string;
-    public age: number;
+// class Person1 implements Human {
+//     public name: string;
+//     public age: number;
 
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
+//     constructor(name: string, age: number) {
+//         this.name = name;
+//         this.age = age;
+//     }
 
-    saysHello(name: string): void {
-        console.log(`${this.name} says Hello!`);
-    }
+//     saysHello(name: string): void {
+//         console.log(`${this.name} says Hello!`);
+//     }
 
-    move(): void {
-        console.log('Moving...!');
-    }
-}
+//     move(): void {
+//         console.log('Moving...!');
+//     }
+// }

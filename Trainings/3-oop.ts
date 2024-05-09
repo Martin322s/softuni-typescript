@@ -74,6 +74,21 @@ class Human {
 let pesho = new Human('Pesho', '9865741233');
 
 // Polymorphism
+interface Animal {
+    move: () => void
+}
+
+class Lion {
+    move() {
+        console.log('Moving by walking on the ground.');
+    }
+}
+
+class Fish {
+    move() {
+        console.log('Moving by swimming in the ocean.');
+    }
+}
 
 // SOLID
 // 1. Single Responsibility Principle
