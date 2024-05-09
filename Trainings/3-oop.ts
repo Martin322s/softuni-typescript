@@ -130,6 +130,18 @@ class DiscountedOrder extends Order {
 }
 
 // 3. Liskov Substitution Principle
+class CoffeeMachine {
+    makeCoffee() {
+
+    }
+}
+
+class LavazzaCoffeeMachine extends CoffeeMachine {
+    makeCoffee() {
+
+    }
+}
+
 // 4. Interface Segregation Principle
 // 5. Dependency Inversion Principle
 
