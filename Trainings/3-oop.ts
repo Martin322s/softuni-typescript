@@ -232,6 +232,24 @@ class Wallet {
   console.log("courses", userIvan.course.courses);
 
 // Classes - Function constructor and Objects
+class Car {
+    brand: string;
+    model: string;
+    year: number;
+
+    constructor(brand: string, model: string, year: number) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    horn() {
+        console.log('Beep! Beep!');
+    }
+}
+
+let ford: Car = new Car('Ford', 'Focus', 2007);
+console.log(ford);
 
 // Propertiesm Methods, Constructor
 // Static, Accessors and Access Modifiers
