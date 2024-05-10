@@ -337,3 +337,20 @@ let appleTree = new Tree('Apple');
 console.log(appleTree.name);
 
 // BONUS: NEW keyword workflow
+function make(constructor: any, ...params: any[]) {
+    // 1. Create an object
+    let object = {};
+
+    // 2. Set properties
+    constructor.apply(object, params);
+
+    // 3. Set prototype
+    Object.setPrototypeOf(object, constructor.prototype);
+
+    // 4. Return the object
+    return object;
+}
+
+let peach = make(Vehicle, '340i', 'bmw', 2007);
+
+console.log(peach);
