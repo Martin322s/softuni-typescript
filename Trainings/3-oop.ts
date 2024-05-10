@@ -269,6 +269,55 @@ class DriverCar {
 }
 
 // Static, Accessors and Access Modifiers
+class Maths {
+    static PI: number = 3.144698665445665;
+    static pow(num: number, power: number): number {
+        return num ** power;
+    }
+}
+
+console.log(Maths.PI);
+console.log(Maths.pow(2, 5));
+
+class Vehicle {
+    public model: string;
+    private brand: string;
+    protected year: number;
+
+    constructor(model: string, brand: string, year: number) {
+        this.model = model;
+        this.brand = brand;
+        this.year = year;
+    }
+
+    get getBrand() {
+        return this.brand;
+    }
+
+    set setBrand(brand: string) {
+        this.brand = brand;
+    }
+}
+
+class BMW extends Vehicle {
+    constructor(model: string, brand: string, year: number) {
+        super(model, brand, year);
+    }
+
+    get getModel() {
+        return this.model;
+    }
+}
+
+let car: Vehicle = new Vehicle('340i', 'bmw', 2007);
+let bmw: BMW = new BMW('340i', 'bmw', 2007);
+
+console.log(car.getBrand);
+
+bmw.setBrand = 'opel';
+
+console.log(bmw.getBrand);
+
 // Readonly and Abstract classes
 
 // BONUS: NEW keyword workflow
