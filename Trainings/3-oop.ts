@@ -319,5 +319,21 @@ bmw.setBrand = 'opel';
 console.log(bmw.getBrand);
 
 // Readonly and Abstract classes
+abstract class Plant {
+    readonly name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+class Tree extends Plant {
+    constructor(name: string) {
+        super(name);
+    }
+}
+
+let appleTree = new Tree('Apple');
+console.log(appleTree.name);
 
 // BONUS: NEW keyword workflow
