@@ -252,6 +252,22 @@ let ford: Car = new Car('Ford', 'Focus', 2007);
 console.log(ford);
 
 // Propertiesm Methods, Constructor
+class DriverCar {
+    brand: string;
+    model: string;
+    year: number;
+
+    constructor(brand: string, model: string, year: number) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    horn() {
+        console.log('Beep! Beep!');
+    }
+}
+
 // Static, Accessors and Access Modifiers
 // Readonly and Abstract classes
 
