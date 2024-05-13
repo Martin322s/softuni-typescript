@@ -149,3 +149,39 @@ const costSpeedy = calcSpeedy.calculateCost(10, 100);
 // fedex
 const calcFedex = new DeliveryCalcCost(fedexDelivery);
 const costFedex = calcFedex.calculateCost(10, 100);
+
+// 5. Adapter pattern - incompatible interfaces to work together by providing a wrapper
+interface Target {
+    request(): string;
+}
+
+class Adaptee {
+    public specificRequest(): string {
+        return ".ecafretni gnitseuqer yllacificepS";
+    }
+}
+
+class Adapter implements Target {
+    private adaptee: Adaptee;
+
+    constructor(adaptee: Adaptee) {
+        this.adaptee = adaptee;
+    }
+
+    public request(): string {
+        const result = this.adaptee.specificRequest().split('').reverse().join('');
+        return `Adapter: (TRANSLATED) ${result}`;
+    }
+}
+
+function clientCode(target: Target) {
+    console.log(target.request());
+}
+
+const adaptee = new Adaptee();
+console.log("Adaptee: " + adaptee.specificRequest());
+
+const adapter = new Adapter(adaptee);
+clientCode(adapter);
+
+// Generics
