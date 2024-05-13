@@ -1,5 +1,5 @@
 // Design Patterns
-// 1. Singleton - class design pattern, which returns ONLY one instance
+// 1. Singleton pattern - class design pattern, which returns ONLY one instance
 class Singleton {
     private static instance: Singleton | null = null;
 
@@ -55,7 +55,7 @@ function factory(brand: string) {
 console.log(factory('BMW'));
 console.log(factory('Opel'));
 
-// 3. Observer pattern
+// 3. Observer pattern - dynamic object, which can be subscribed and notified about changes
 interface Observer {
     update(message: string): void;
 }
@@ -102,3 +102,50 @@ subject.addObserver(observer2);
 subject.notifyObservers('Hello Observers!');
 subject.removeObserver(observer1);
 subject.notifyObservers('Hello again!');
+
+// 4. Strategy pattern - family of capsulated algorithms each one interchangeable
+interface DeliveryStrategy {
+    calcCost(weight: number, distance: number): number;
+}
+
+class EcontStrategy implements DeliveryStrategy {
+    calcCost(weight: number, distance: number): number {
+        return (weight * distance) / 100;
+    }
+}
+class SpeedyStrategy implements DeliveryStrategy {
+    calcCost(weight: number, distance: number): number {
+        return weight * distance - 100;
+    }
+}
+class FedExStrategy implements DeliveryStrategy {
+    calcCost(weight: number, distance: number): number {
+        return weight * distance * distance;
+    }
+}
+
+class DeliveryCalcCost {
+    private deliveryStrategy: DeliveryStrategy;
+
+    constructor(deliveryStrategy: DeliveryStrategy) {
+        this.deliveryStrategy = deliveryStrategy;
+    }
+
+    calculateCost(weight: number, distance: number): number {
+        return this.deliveryStrategy.calcCost(weight, distance);
+    }
+}
+
+const econtDelivery = new EcontStrategy();
+const speedyDelivery = new SpeedyStrategy();
+const fedexDelivery = new FedExStrategy();
+
+// econt
+const calcEcont = new DeliveryCalcCost(econtDelivery);
+const costEcont = calcEcont.calculateCost(10, 100);
+// speedy
+const calcSpeedy = new DeliveryCalcCost(speedyDelivery);
+const costSpeedy = calcSpeedy.calculateCost(10, 100);
+// fedex
+const calcFedex = new DeliveryCalcCost(fedexDelivery);
+const costFedex = calcFedex.calculateCost(10, 100);
