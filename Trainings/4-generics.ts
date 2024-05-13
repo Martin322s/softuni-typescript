@@ -54,3 +54,51 @@ function factory(brand: string) {
 
 console.log(factory('BMW'));
 console.log(factory('Opel'));
+
+// 3. Observer pattern
+interface Observer {
+    update(message: string): void;
+}
+
+class Subject {
+    private observers: Observer[] = [];
+
+    public addObserver(observer: Observer): void {
+        this.observers.push(observer)
+    }
+
+    public removeObserver(observer: Observer): void {
+        const index = this.observers.indexOf(observer);
+        if (index > -1) {
+            this.observers.splice(index, 1);
+        }
+    }
+
+    public notifyObservers(message: string): void {
+        for (const observer of this.observers) {
+            observer.update(message);
+        }
+    }
+}
+
+class ConcreteObserver implements Observer {
+    private name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    public update(message: string): void {
+        console.log(`${this.name} received message: ${message}`);
+    }
+}
+
+const subject = new Subject();
+const observer1 = new ConcreteObserver('Observer 1');
+const observer2 = new ConcreteObserver('Observer 2');
+
+subject.addObserver(observer1);
+subject.addObserver(observer2);
+subject.notifyObservers('Hello Observers!');
+subject.removeObserver(observer1);
+subject.notifyObservers('Hello again!');
