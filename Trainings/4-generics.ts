@@ -205,3 +205,10 @@ const usingGeneric = <T>(param: T): string => {
 console.log(usingGeneric('xyzzz'));
 console.log(usingGeneric(123456));
 console.log(usingGeneric(true));
+
+// Function example with generic
+function lastElement<T>(arr: T[]) {
+    return arr.pop();
+}
+
+console.log(lastElement<number>([1, 2, 3, 4, 5]));
