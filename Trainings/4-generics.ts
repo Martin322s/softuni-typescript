@@ -185,6 +185,7 @@ const adapter = new Adapter(adaptee);
 clientCode(adapter);
 
 // Generics - Basic example
+// without generic
 const stringParam = (param: string): string => {
     return `${param} is having type ${typeof param}`;
 }
@@ -195,3 +196,12 @@ const numberParam = (param: number): string => {
 
 console.log(stringParam('xyz'));
 console.log(numberParam(123));
+
+// with generic
+const usingGeneric = <T>(param: T): string => {
+    return `${param} is having type ${typeof param}`;
+}
+
+console.log(usingGeneric('xyzzz'));
+console.log(usingGeneric(123456));
+console.log(usingGeneric(true));
