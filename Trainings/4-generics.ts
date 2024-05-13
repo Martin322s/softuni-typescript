@@ -184,4 +184,14 @@ console.log("Adaptee: " + adaptee.specificRequest());
 const adapter = new Adapter(adaptee);
 clientCode(adapter);
 
-// Generics
+// Generics - Basic example
+const stringParam = (param: string): string => {
+    return `${param} is having type ${typeof param}`;
+}
+
+const numberParam = (param: number): string => {
+    return `${param} is having type ${typeof param}`;
+}
+
+console.log(stringParam('xyz'));
+console.log(numberParam(123));
