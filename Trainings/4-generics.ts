@@ -233,3 +233,32 @@ const generatedFn: GenericConstructor<string, string> = <T, V>(arg: T, param: V)
 
 const sample = generatedFn('Hello', 'World');
 console.log(sample);
+
+// Generic classes
+class Collection<T> {
+    public data: T[];
+
+    constructor(...elements: T[]) { 
+        this.data = elements; 
+    }
+
+    addElement(el: T) { 
+        this.data.push(el); 
+    }
+
+    removElement(el: T) {
+        let index = this.data.indexOf(el);
+
+        if (index > -1) {
+            this.data.splice(index, 1);
+        }
+    }
+
+    reverseElements() { 
+        return this.data.reverse(); 
+    }
+
+    showElements() { 
+        return this.data; 
+    }
+}
