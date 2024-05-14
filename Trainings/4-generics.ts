@@ -281,3 +281,11 @@ let sample2 = new UserInput('Ten', 10);
 let test = new UserInput(1, true);
 console.log(sample2.showBoth());
 console.log(test.showBoth());
+
+// Generic Types as Constraints
+function fullName2<T extends { fName: string, lName: string }>(obj: T) {
+    return `The full name is ${obj.fName} ${obj.lName}.`;
+}
+
+let output = fullName2({ fName: 'Svetoslv', lName: 'Dimitrov' });
+console.log(output);
