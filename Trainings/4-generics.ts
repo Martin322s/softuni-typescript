@@ -238,12 +238,12 @@ console.log(sample);
 class Collection<T> {
     public data: T[];
 
-    constructor(...elements: T[]) { 
-        this.data = elements; 
+    constructor(...elements: T[]) {
+        this.data = elements;
     }
 
-    addElement(el: T) { 
-        this.data.push(el); 
+    addElement(el: T) {
+        this.data.push(el);
     }
 
     removElement(el: T) {
@@ -254,11 +254,30 @@ class Collection<T> {
         }
     }
 
-    reverseElements() { 
-        return this.data.reverse(); 
+    reverseElements() {
+        return this.data.reverse();
     }
 
-    showElements() { 
-        return this.data; 
+    showElements() {
+        return this.data;
     }
 }
+
+class UserInput<F, S> {
+    public first: F;
+    public second: S;
+
+    constructor(f: F, s: S) {
+        this.first = f;
+        this.second = s;
+    }
+
+    showBoth() {
+        return `First: ${this.first}, second: ${this.second}`;
+    }
+}
+
+let sample2 = new UserInput('Ten', 10);
+let test = new UserInput(1, true);
+console.log(sample2.showBoth());
+console.log(test.showBoth());
