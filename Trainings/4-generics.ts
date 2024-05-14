@@ -212,3 +212,12 @@ function lastElement<T>(arr: T[]) {
 }
 
 console.log(lastElement<number>([1, 2, 3, 4, 5]));
+
+// make tuple
+function makeTuple<T, V>(a: T, b: V) {
+    return [a, b];
+}
+
+const firstTuple = makeTuple(1, 2);
+const secondTuple = makeTuple('a', 'b');
+console.log(firstTuple, secondTuple);
