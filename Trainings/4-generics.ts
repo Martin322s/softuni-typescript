@@ -185,7 +185,7 @@ const adapter = new Adapter(adaptee);
 clientCode(adapter);
 
 // Generics - Basic example
-// without generic
+// Without generic
 const stringParam = (param: string): string => {
     return `${param} is having type ${typeof param}`;
 }
@@ -197,7 +197,7 @@ const numberParam = (param: number): string => {
 console.log(stringParam('xyz'));
 console.log(numberParam(123));
 
-// with generic
+// With generic
 const usingGeneric = <T>(param: T): string => {
     return `${param} is having type ${typeof param}`;
 }
@@ -213,7 +213,7 @@ function lastElement<T>(arr: T[]) {
 
 console.log(lastElement<number>([1, 2, 3, 4, 5]));
 
-// make tuple
+// Make tuple
 function makeTuple<T, V>(a: T, b: V) {
     return [a, b];
 }
@@ -221,3 +221,15 @@ function makeTuple<T, V>(a: T, b: V) {
 const firstTuple = makeTuple(1, 2);
 const secondTuple = makeTuple('a', 'b');
 console.log(firstTuple, secondTuple);
+
+// Generic interfaces
+interface GenericConstructor<T, V> {
+    (arg: T, param: T): [T, V]
+}
+
+const generatedFn: GenericConstructor<string, string> = <T, V>(arg: T, param: V) => {
+    return [arg, param];
+}
+
+const sample = generatedFn('Hello', 'World');
+console.log(sample);
