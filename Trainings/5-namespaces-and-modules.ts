@@ -3,6 +3,6 @@
 const dolphin = new Animal.Mammal('dolphin');
 console.log(dolphin);
 
+import laptops = TechShop.Laptop;
 
-
-const samsung = new TechShop.Laptop.Samsung();
+const samsung = new laptops.Samsung();
