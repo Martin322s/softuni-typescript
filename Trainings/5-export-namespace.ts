@@ -14,4 +14,8 @@ namespace TechShop {
         export class Lenovo {}
         export class HP {}
     }
+
+    export function sum(a: number, b: number) {
+        return a + b;
+    }
 }
