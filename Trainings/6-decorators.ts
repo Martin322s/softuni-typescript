@@ -5,26 +5,7 @@ function classDecorator(constructor: Function) {
 
 function methodDecorator(target: Emitter, key: String, descriptor: TypedPropertyDescriptor<() => void>) {
     console.log('Method decorator called!');
-
 }
-
-@classDecorator
-class Emitter {
-    constructor() {
-        console.log('Constructor called!');
-    }
-
-    @methodDecorator
-    emit() {
-        console.log('Method called');
-    }
-}
-
-const emit = new Emitter();
-
-console.log(emit);
-emit.emit();
-
 
 function configurable(configurable: boolean) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
@@ -32,15 +13,35 @@ function configurable(configurable: boolean) {
     }
 }
 
-class Point2 {
-    private _x: number;
-    private _y: number;
-    constructor(x: number, y: number) {
-        this._x = x;
-        this._y = y;
-    }
-    @configurable(false)
-    get x() { return this._x; }
-    @configurable(false)
-    get y() { return this._y; }
+function propertyDecorator(constructor: Emitter, name: string) {
+    console.log('Property Decorator called!');
+    
 }
+
+@classDecorator
+class Emitter {
+    @propertyDecorator
+    private _x: number;
+
+    constructor(_x: number) {
+        this._x = _x;
+        console.log('Constructor called!');
+    }
+
+    @methodDecorator
+    emit() {
+        console.log('Method called');
+    }
+
+    @configurable(false)
+    get x() {
+        console.log('Accessor decorator called');
+        return this._x; 
+    }
+}
+
+const emit = new Emitter(1);
+
+console.log(emit);
+emit.emit();
+emit.x;
