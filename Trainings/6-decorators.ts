@@ -15,11 +15,18 @@ function configurable(configurable: boolean) {
 
 function propertyDecorator(constructor: Emitter, name: string) {
     console.log('Property Decorator called!');
-    
+
 }
 
 function paramDecorator(target: Object, propertyKey: string, parameterIndex: number) {
     console.log('Param decorator called!');
+}
+
+function enumerable(value: boolean) {
+    return function (target: Object, propertyKey:
+        string, descriptor: PropertyDescriptor) {
+        descriptor.enumerable = value;
+    };
 }
 
 @classDecorator
@@ -40,7 +47,7 @@ class Emitter {
     @configurable(false)
     get x() {
         console.log('Accessor decorator called');
-        return this._x; 
+        return this._x;
     }
 }
 
