@@ -3,7 +3,7 @@ function classDecorator(constructor: Function) {
     console.log('Decorator called!');
 }
 
-function methodDecorator(target: Emitter, key: String, descriptor: TypedPropertyDescriptor<() => void>) {
+function methodDecorator(target: Emitter, key: String, descriptor: TypedPropertyDescriptor<(param: boolean) => void>) {
     console.log('Method decorator called!');
 }
 
@@ -18,6 +18,10 @@ function propertyDecorator(constructor: Emitter, name: string) {
     
 }
 
+function paramDecorator(target: Object, propertyKey: string, parameterIndex: number) {
+    console.log('Param decorator called!');
+}
+
 @classDecorator
 class Emitter {
     @propertyDecorator
@@ -29,7 +33,7 @@ class Emitter {
     }
 
     @methodDecorator
-    emit() {
+    emit(@paramDecorator param: boolean) {
         console.log('Method called');
     }
 
@@ -43,5 +47,5 @@ class Emitter {
 const emit = new Emitter(1);
 
 console.log(emit);
-emit.emit();
+emit.emit(true);
 emit.x;
