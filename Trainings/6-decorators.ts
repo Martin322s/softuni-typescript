@@ -3,6 +3,10 @@ function classDecorator(constructor: Function) {
     console.log('Decorator called!');
 }
 
+function secondClassDecorator(constructor: Function) {
+    console.log('Second class decorator called!');
+}
+
 function methodDecorator(target: Emitter, key: String, descriptor: TypedPropertyDescriptor<(param: boolean) => void>) {
     console.log('Method decorator called!');
 }
@@ -29,6 +33,7 @@ function enumerable(value: boolean) {
     };
 }
 
+@secondClassDecorator
 @classDecorator
 class Emitter {
     @propertyDecorator
