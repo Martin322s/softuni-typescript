@@ -12,9 +12,9 @@ export class UserService<T> {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ firstName, lastName });
+            body: JSON.stringify({ firstName, lastName })
         });
-        
+
         return await res.json();
     }
 }
